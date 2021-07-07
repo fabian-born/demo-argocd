@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-tbc-ontap-nas-eco-secret
+type: Opaque
+stringData:
+  username: admin
+  password: netapp123
+---
+apiVersion: trident.netapp.io/v1
+kind: TridentBackendConfig
+metadata:
+  name: backend-tbc-ontap-nas-eco
+spec:
+  version: 1
+  storageDriverName: ontap-nas-economy
+  managementLIF: 192.168.69.50
+  dataLIF: 192.168.69.61
+  svm: optimusprime
+  credentials: 
+    name: backend-tbc-ontap-nas-eco-secret
