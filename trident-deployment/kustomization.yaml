@@ -13,3 +13,4 @@ resources:
   - podsecuritypolicy_unprivileged.yaml
   - operator.yaml
   - namespace.yaml
+  - crds/tridentorchestrator_cr.yaml
