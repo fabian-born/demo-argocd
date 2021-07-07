@@ -1,1 +1,2 @@
-# demo-argocd
+# argocd-demo
+ArgoDC Demo
